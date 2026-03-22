@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,14 @@
 
 <body>
 
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <span>📞 +421 900 000 000</span>
+            <span>✉️ info@umilana.sk</span>
+            <span>📍 Žilina a okolie</span>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="logo-container">
             <img src="obrázky/Frič_zadanie č.3 logo.png" alt="Logo" class="logo">
@@ -18,70 +26,128 @@
         <ul class="nav-links">
             <li><a href="#o-nas">O nás</a></li>
             <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#projekty">Projekty</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 
     <header class="hero" id="domov">
         <div class="hero-content">
-            <h1>Kvalitné stavebné práce na kľúč</h1>
-            <p>Sme spoľahlivý partner pre vaše bývanie a stavebné projekty.</p>
-            <a href="#kontakt" class="btn">Získať cenovú ponuku</a>
+            <h1>Spoľahlivé stavebné riešenia pre váš projekt</h1>
+            <p>Sme tu pre vás od základov až po strechu. Kvalita, ktorej môžete dôverovať.</p>
+            <a href="#kontakt" class="btn">Nezáväzná cenová ponuka</a>
         </div>
     </header>
 
     <section id="o-nas" class="container">
-        <h2>O nás</h2>
-        <p class="subtitle">Staviame na dôvere a dlhoročných skúsenostiach.</p>
-        <p>Sme stavebná firma s dlhoročnými skúsenosťami. Ponúkame kvalitné stavebné práce za výhodné ceny. Ku každému
-            projektu pristupujeme individuálne a s maximálnym dôrazom na detail a trvácnosť materiálov.</p>
+        <h2>Prečo si vybrať nás?</h2>
+        <p class="subtitle">Staviame na dôvere, tradícii a dlhoročných skúsenostiach.</p>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="icon">🏗️</div>
+                <h3>Dlhoročné skúsenosti</h3>
+                <p>Roky praxe sú zárukou kvality a odbornosti na každej stavbe.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">🤝</div>
+                <h3>Komplexné služby</h3>
+                <p>Poskytujeme všetko od prvého výkopu až po odovzdanie kľúčov.</p>
+            </div>
+            <div class="feature-box">
+                <div class="icon">⏱️</div>
+                <h3>Dôraz na termíny</h3>
+                <p>Dodržiavame dohodnuté termíny a rozpočty bez skrytých poplatkov.</p>
+            </div>
+        </div>
     </section>
 
     <section id="sluzby" class="bg-light">
         <div class="container">
             <h2>Naše služby</h2>
+            <p class="subtitle">Kliknite na službu pre viac informácií</p>
             <div class="services">
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Výstavba rodinných domov', 'Zabezpečujeme kompletnú výstavbu rodinných domov na kľúč. Od hrubej stavby až po finálne úpravy interiéru. Pracujeme s modernými materiálmi a dôrazom na energetickú úspornosť.')">
                     <h3>Výstavba rodinných domov</h3>
-                    <p>Od základov až po strechu, presne podľa vašich predstáv.</p>
+                    <p>Od základov až po strechu... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Rekonštrukcie', 'Ponúkame kompletné aj čiastočné rekonštrukcie starších rodinných domov, bytov a komerčných priestorov. Modernizácia kúpeľní, zmeny dispozícií a výmeny rozvodov.')">
                     <h3>Rekonštrukcie</h3>
-                    <p>Obnova starších domov a modernizácia bytov.</p>
+                    <p>Obnova starších domov... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Murárske práce', 'Profesionálne murovanie obvodových stien a priečok, omietky, stierky, betonárske práce a drobné stavebné úpravy podľa požiadaviek.')">
                     <h3>Murárske práce</h3>
-                    <p>Profesionálne murovanie, omietky a stierky.</p>
+                    <p>Murovanie, omietky a stierky... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Zatepľovanie', 'Zateplenie fasád certifikovanými systémami (polystyrén, minerálna vlna). Výrazne znížime vaše náklady na energie a zlepšíme tepelný komfort v dome.')">
                     <h3>Zatepľovanie</h3>
-                    <p>Znížte svoje náklady na energie kvalitnou izoláciou.</p>
+                    <p>Znížte náklady na energie... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Strechy a krytiny', 'Realizujeme nové krovy, opravujeme staré strechy a pokladáme všetky druhy škridiel a plechových krytín. Zabezpečíme aj klampiarske práce.')">
                     <h3>Strechy a krytiny</h3>
-                    <p>Opravy a montáž nových striech s dlhou životnosťou.</p>
+                    <p>Opravy a montáž nových striech... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
-                <div class="card">
+                <div class="card clickable"
+                    onclick="openModal('Obklady a dlažby', 'Presná pokládka keramickej dlažby, kameňa a zámkovej dlažby. Riešime kúpeľne, terasy, chodníky aj príjazdové cesty.')">
                     <h3>Obklady a dlažby</h3>
-                    <p>Precízna pokládka v interiéri aj exteriéri.</p>
+                    <p>Interiérová aj exteriérová pokládka... <br><span class="read-more">Čítať viac &rarr;</span></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="kontakt" class="container">
-        <h2>Kontaktujte nás</h2>
-        <p>Sme tu pre vás. Zavolajte nám alebo nám napíšte a dohodneme si obhliadku.</p>
-        <div class="contact-info">
-            <p><strong>Email:</strong> info@umilana.sk</p>
-            <p><strong>Telefón:</strong> +421 900 000 000</p>
+    <section id="projekty" class="container">
+        <h2>Zrealizované projekty</h2>
+        <p class="subtitle">Ukážky našej kvalitnej práce.</p>
+        <div class="projects-gallery">
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80"
+                    alt="Dom">
+                <div class="project-overlay">Rodinný dom na kľúč</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80"
+                    alt="Stavba">
+                <div class="project-overlay">Hrubá stavba</div>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80"
+                    alt="Rekonštrukcia">
+                <div class="project-overlay">Rekonštrukcia interiéru</div>
+            </div>
         </div>
-        <button class="btn" onclick="showMessage()">Napísať správu</button>
+    </section>
+
+    <section id="kontakt" class="bg-light">
+        <div class="container">
+            <h2>Máte záujem o projekt?</h2>
+            <p>Zanechajte nám správu a my sa vám ozveme s návrhom riešenia.</p>
+            <div class="contact-form">
+                <input type="text" id="meno" placeholder="Vaše Meno" required>
+                <input type="email" id="email" placeholder="Váš Email" required>
+                <textarea id="sprava" rows="5" placeholder="Napíšte nám, čo potrebujete postaviť alebo opraviť..."
+                    required></textarea>
+                <button class="btn" onclick="sendMessage()">Odoslať dopyt</button>
+            </div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2026 Stavebníctvo u Milana | Všetky práva vyhradené.</p>
     </footer>
+
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Názov služby</h3>
+            <p id="modalDesc">Detailný popis služby...</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

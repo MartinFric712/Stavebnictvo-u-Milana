@@ -1,13 +1,12 @@
-/* Základné nastavenia a farby */
 :root {
-    --primary-color: #e67e22; /* Profesionálna oranžová (často používaná v stavebníctve) */
-    --dark-bg: #2c3e50; /* Tmavomodrá/Sivá */
+    --primary-color: #e67e22;
+    --dark-bg: #1a252f;
     --light-bg: #f8f9fa;
     --text-color: #333;
 }
 
 html {
-    scroll-behavior: smooth; /* Plynulé posúvanie stránky na odkazované sekcie */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,7 +16,24 @@ body {
     line-height: 1.6;
 }
 
-/* Navigačná lišta (Header) */
+/* Top Bar */
+.top-bar {
+    background: #111820;
+    color: #bbb;
+    font-size: 0.9rem;
+    padding: 8px 0;
+}
+
+.top-bar-content {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+/* Navigation bar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -37,12 +53,12 @@ body {
 }
 
 .logo {
-    width: 110px; 
+    width: 60px;
     border-radius: 5px;
 }
 
 .brand-name {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -50,7 +66,6 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.5rem;
 }
 
 .nav-links li {
@@ -69,10 +84,9 @@ body {
     color: var(--primary-color);
 }
 
-/* Uvítacia sekcia (Hero) */
+/* Hero */
 .hero {
-    /* Tu môžeš dať URL na fotku domu alebo stavby. Ak nenájde, zobrazí sa tmavá farba */
-    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80') center/cover;
+    background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80') center/cover;
     color: white;
     text-align: center;
     padding: 120px 20px;
@@ -88,7 +102,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Spoločné štýly a sekcie */
+/* Sekcie */
 .container {
     max-width: 1100px;
     margin: auto;
@@ -111,8 +125,135 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* O nás */
+.features-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 30%;
+    min-width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-box .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    color: var(--primary-color);
+}
+
+/* Služby */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: calc(33.333% - 40px);
+    min-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card h3 {
+    color: var(--dark-bg);
+    margin-top: 0;
+}
+
+.read-more {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(230, 126, 34, 0.2);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+/* Projekty */
+.projects-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-item {
+    position: relative;
+    width: 30%;
+    min-width: 280px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(26, 37, 47, 0.9);
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Formular */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
 /* Tlačidlá */
-.btn, button {
+.btn {
     display: inline-block;
     background: var(--primary-color);
     color: white;
@@ -123,48 +264,12 @@ h2 {
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
+    transition: 0.3s;
 }
 
-.btn:hover, button:hover {
-    background: #d35400; /* Tmavšia oranžová */
+.btn:hover {
+    background: #d35400;
     transform: translateY(-2px);
-}
-
-/* Služby (Karty) */
-.services {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.card {
-    background: white;
-    padding: 25px;
-    width: calc(33.333% - 40px);
-    min-width: 250px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-}
-
-.card h3 {
-    color: var(--primary-color);
-    margin-top: 0;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* Kontakt */
-.contact-info {
-    margin: 30px 0;
-    font-size: 1.1rem;
 }
 
 /* Footer */
@@ -176,19 +281,88 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responzívny dizajn pre mobily */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    animation: vyskocenie 0.3s ease-out;
+}
+
+@keyframes vyskocenie {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-content h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+/* Responzivita na mobil */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         padding: 15px;
     }
+
     .nav-links {
         margin-top: 15px;
     }
+
     .hero-content h1 {
         font-size: 2rem;
     }
-    .card {
+
+    .card,
+    .feature-box,
+    .project-item {
         width: 100%;
+    }
+
+    .top-bar-content {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
     }
 }
