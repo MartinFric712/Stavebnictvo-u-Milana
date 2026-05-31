@@ -25,7 +25,7 @@ body {
     background: #fff;
 }
 
-/* ── TOP BAR ── */
+/*  TOP BAR  */
 .top-bar {
     background: var(--dark);
     color: #8a9aaa;
@@ -45,7 +45,7 @@ body {
 
 .top-bar-content span { display: flex; align-items: center; gap: 6px; }
 
-/* ── NAVBAR ── */
+/*  NAVBAR  */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -98,7 +98,7 @@ body {
     background: rgba(255,255,255,0.07);
 }
 
-/* ── HERO ── */
+/*  HERO  */
 .hero {
     background:
         linear-gradient(165deg, rgba(17,24,32,0.88) 0%, rgba(17,24,32,0.55) 60%, rgba(230,126,34,0.18) 100%),
@@ -193,7 +193,7 @@ body {
     color: #fff;
 }
 
-/* ── SECTIONS ── */
+/*  SECTIONS  */
 .container {
     max-width: 1140px;
     margin: auto;
@@ -231,7 +231,7 @@ h2 {
     font-size: 1.05rem;
 }
 
-/* ── FEATURES ── */
+/*  FEATURES  */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -281,7 +281,7 @@ h2 {
     font-size: 0.95rem;
 }
 
-/* ── SERVICES ── */
+/*  SERVICES  */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -344,7 +344,7 @@ h2 {
 
 .clickable:hover::before { transform: scaleY(1); }
 
-/* ── PROJECTS ── */
+/*  PROJECTS  */
 .projects-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -380,7 +380,7 @@ h2 {
     letter-spacing: 0.06em;
 }
 
-/* ── CONTACT ── */
+/*  CONTACT  */
 .contact-wrap {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
@@ -462,7 +462,7 @@ h2 {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder { color: #aaa; }
 
-/* ── FOOTER ── */
+/*  FOOTER  */
 footer {
     background: var(--dark);
     color: #6b7a86;
@@ -474,7 +474,7 @@ footer {
 
 footer strong { color: #fff; font-weight: 600; }
 
-/* ── MODAL ── */
+/*  MODAL  */
 .modal {
     display: none;
     position: fixed;
@@ -531,7 +531,7 @@ footer strong { color: #fff; font-weight: 600; }
 }
 .close-btn:hover { color: var(--dark); }
 
-/* ── RESPONSIVE ── */
+/*  RESPONSIVE  */
 @media (max-width: 768px) {
     .navbar { padding: 0 20px; height: auto; flex-direction: column; padding: 14px 20px; }
     .nav-links { margin-top: 12px; flex-wrap: wrap; justify-content: center; }
